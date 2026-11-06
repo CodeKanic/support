@@ -1,0 +1,61 @@
+# When a new template is released, add it to the product dropdown.
+name: Bug report
+description: Something in a template isn't working
+labels: [bug]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Which product is this about?
+      description: Pick the one you bought or downloaded. Don't see it? Choose Other.
+      options:
+        - Tower Defense Starter Kit (Godot 4)
+        - Spin Shot
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Template or game version if you know it
+      placeholder: e.g. v1.0
+  - type: input
+    id: engine
+    attributes:
+      label: Engine or tool and version
+      description: What you opened it with
+      placeholder: e.g. Godot 4.3, Unity 2022, Notion
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen
+      value: |
+        1.
+        2.
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error message or screenshot
+      description: Short snippets only. Don't paste full template code.
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: e.g. Windows 11, macOS 14, Ubuntu 24.04

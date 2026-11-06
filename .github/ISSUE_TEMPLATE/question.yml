@@ -1,0 +1,34 @@
+# When a new template is released, add it to the product dropdown.
+name: Question
+description: Not sure how something works
+labels: [question]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Which product is this about?
+      description: Pick the one you bought or downloaded. Don't see it? Choose Other.
+      options:
+        - Tower Defense Starter Kit (Godot 4)
+        - Spin Shot
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Template or game version if you know it
+      placeholder: e.g. v1.0
+  - type: textarea
+    id: trying
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+    validations:
+      required: true

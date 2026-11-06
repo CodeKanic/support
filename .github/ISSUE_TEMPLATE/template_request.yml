@@ -1,0 +1,31 @@
+# When a new template is released, add it to the product dropdown.
+name: Template or feature request
+description: Ideas for a new template or something to add to one
+labels: [template-request]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Is this related to an existing template?
+      description: Pick the one you bought or downloaded. Don't see it? Choose Other.
+      options:
+        - No, it's a new template idea
+        - Tower Defense Starter Kit (Godot 4)
+        - Spin Shot
+        - Other / not sure
+  - type: textarea
+    id: what-it-should-do
+    attributes:
+      label: What should it do?
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: Engine or tool
+      placeholder: e.g. Godot 4, Unity, Notion
+  - type: textarea
+    id: building
+    attributes:
+      label: What are you building with it?
+      description: Helps me decide what to make next
